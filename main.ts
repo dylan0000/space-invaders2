@@ -370,7 +370,7 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.hp1, function (sprite, other
     hp12.say("+1 HP", 200)
 })
 let bos02: Sprite = null
-let penta: Sprite = null
+let penta2: Sprite = null
 let myDart: Dart = null
 let hp12: Sprite = null
 let proj5: Sprite = null
@@ -617,7 +617,7 @@ game.onUpdateInterval(Math.randomRange(30000, 50000), function () {
     hp12.setPosition(Math.randomRange(55, 105), 10)
 })
 game.onUpdateInterval(Math.randomRange(100000, 120000), function () {
-    penta = sprites.create(img`
+    penta2 = sprites.create(img`
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
@@ -635,8 +635,8 @@ game.onUpdateInterval(Math.randomRange(100000, 120000), function () {
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 `, SpriteKind.penta)
-    penta.follow(protecthis2, 200)
-    penta.destroy()
+    penta2.follow(protecthis2, 200)
+    penta2.destroy()
 })
 forever(function () {
     if (info.score() <= 500 && info.score() >= 200) {
